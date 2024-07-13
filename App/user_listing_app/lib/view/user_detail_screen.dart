@@ -15,7 +15,7 @@ class UserDetailScreen extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/background.jpg'), // Replace with your actual background image path
+            image: AssetImage('assets/images/background.jpg'), 
             fit: BoxFit.cover,
           ),
         ),
@@ -24,14 +24,14 @@ class UserDetailScreen extends StatelessWidget {
             width: MediaQuery.of(context).size.width * 0.8,
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.9), // Adjust opacity as needed
+              color: Colors.white.withOpacity(0.9), 
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.3), // Reduce shadow opacity
+                  color: Colors.grey.withOpacity(0.3), 
                   spreadRadius: 3,
                   blurRadius: 5,
-                  offset: Offset(0, 2), // changes position of shadow
+                  offset: Offset(0, 2), 
                 ),
               ],
             ),
@@ -52,7 +52,7 @@ class UserDetailScreen extends StatelessWidget {
                     color: Colors.black,
                     shadows: [
                       Shadow(
-                        color: Colors.black.withOpacity(0.2), // Lighter shadow
+                        color: Colors.black.withOpacity(0.2), 
                         blurRadius: 2,
                         offset: Offset(1, 1),
                       ),
