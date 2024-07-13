@@ -1,6 +1,5 @@
 
 import '../model/user_model.dart';
-
 class UserController {
   List<User> getUsers() {
     return [
@@ -40,7 +39,7 @@ class UserController {
         phone: '123-456-7890',
         bio: 'Bio of Cristiano Ronaldo',
         address: 'Avenida da Liberdade, Lisbon, Portugal',
-        profilePicture: 'assets/images/Cristiano.webp', // Adjust path and file name
+        profilePicture: 'assets/images/Cristiano.webp', 
       ),
        User(
         name: 'Lionel Messi',
@@ -49,7 +48,7 @@ class UserController {
         phone: '123-456-7890',
         bio: 'Bio of Lionel Messi',
         address: 'Avenida Diagonal, Barcelona, Spain',
-        profilePicture: 'assets/images/lionelmessi.jpg', // Adjust path and file name
+        profilePicture: 'assets/images/lionelmessi.jpg', 
       ),
       User(
         name: 'John Cena',
@@ -58,7 +57,7 @@ class UserController {
         phone: '123-456-7890',
         bio: 'Bio of John Cena',
         address: '123 Wrestler Ave, WWE Universe',
-        profilePicture: 'assets/images/john.jpg', // Adjust path and file name
+        profilePicture: 'assets/images/john.jpg', 
       ),
         User(
         name: 'Angelina Jolie',
@@ -67,9 +66,8 @@ class UserController {
         phone: '123-456-7890',
         bio: 'Bio of Angelina Jolie',
         address: '123 Movie Star Lane, Hollywood, USA',
-        profilePicture: 'assets/images/Angelinajolie.jpg', // Adjust path and file name
+        profilePicture: 'assets/images/Angelinajolie.jpg',
       ),
-      // Add more users
     ];
   }
 }

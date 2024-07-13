@@ -24,93 +24,75 @@ class UserDetailScreen extends StatelessWidget {
             width: MediaQuery.of(context).size.width * 0.8,
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.8), // Adjust opacity as needed
+              color: Colors.white.withOpacity(0.9), // Adjust opacity as needed
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.5),
-                  spreadRadius: 5,
-                  blurRadius: 7,
-                  offset: Offset(0, 3), // changes position of shadow
+                  color: Colors.grey.withOpacity(0.3), // Reduce shadow opacity
+                  spreadRadius: 3,
+                  blurRadius: 5,
+                  offset: Offset(0, 2), // changes position of shadow
                 ),
               ],
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 16),
-                Center(
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage(user.profilePicture),
-                    radius: 50,
-                  ),
+                CircleAvatar(
+                  backgroundImage: AssetImage(user.profilePicture),
+                  radius: 50,
                 ),
                 SizedBox(height: 16),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Text(
-                    user.name,
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                      shadows: [
-                        Shadow(
-                          color: Colors.black,
-                          blurRadius: 2,
-                          offset: Offset(1, 1),
-                        ),
-                      ],
-                    ),
+                Text(
+                  'User Details',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    shadows: [
+                      Shadow(
+                        color: Colors.black.withOpacity(0.2), // Lighter shadow
+                        blurRadius: 2,
+                        offset: Offset(1, 1),
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(height: 8),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Text(
-                    'Email: ${user.email}',
-                    style: TextStyle(fontSize: 18, color: Colors.black),
+                Text(
+                  user.name,
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue, // Example color
                   ),
+                  textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 8),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Text(
-                    'Phone: ${user.phone}',
-                    style: TextStyle(fontSize: 18, color: Colors.black),
-                  ),
+                Text(
+                  'Email: ${user.email}',
+                  style: TextStyle(fontSize: 18, color: Colors.black),
+                  textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 8),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Text(
-                    'Bio:',
-                    style: TextStyle(fontSize: 18, color: Colors.black),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Text(
-                    '${user.bio}',
-                    style: TextStyle(fontSize: 16, color: Colors.black),
-                  ),
+                Text(
+                  'Phone: ${user.phone}',
+                  style: TextStyle(fontSize: 18, color: Colors.black),
+                  textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 8),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Text(
-                    'Address:',
-                    style: TextStyle(fontSize: 18, color: Colors.black),
-                  ),
+                Text(
+                  'Bio: ${user.bio}',
+                  style: TextStyle(fontSize: 18, color: Colors.black),
+                  textAlign: TextAlign.center,
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Text(
-                    '${user.address}',
-                    style: TextStyle(fontSize: 16, color: Colors.black),
-                  ),
+                SizedBox(height: 8),
+                Text(
+                  'Address: ${user.address}',
+                  style: TextStyle(fontSize: 18, color: Colors.black),
+                  textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 16),
               ],
             ),
           ),

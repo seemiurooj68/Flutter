@@ -22,12 +22,25 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Contacts'),
+        title: Text(
+          'Contacts',
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            shadows: [
+              Shadow(
+                color: Colors.grey.withOpacity(0.5),
+                blurRadius: 2,
+                offset: Offset(1, 1),
+              ),
+            ],
+          ),
+        ),
       ),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/background.jpg'), // Replace with your image
+            image: AssetImage('assets/images/background.jpg'), 
             fit: BoxFit.cover,
           ),
         ),
